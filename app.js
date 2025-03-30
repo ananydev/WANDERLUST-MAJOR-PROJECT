@@ -64,7 +64,7 @@ app.use(express.static(path.join(__dirname, "/public")));
 const store = MongoStore.create({
   mongoUrl: dbUrl,  // Ensure dbUrl is correctly defined
   crypto: {
-    secret: "mysupersecretcode",  // Add a valid secret key
+    secret: process.env.SECRET,  // Add a valid secret key
   },
   touchAfter: 24 * 3600, // Reduce session writes (in seconds)
 });
@@ -76,7 +76,7 @@ store.on("error", () => {
 
 const sessionOptions = {
   store,
-    secret: "mysupersecretcode",
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true,
     cookie: {

@@ -8,21 +8,138 @@ Wanderlust is a full-stack web application designed for users to explore, list, 
 
 ✅ Features
 
-User Authentication (Signup & Login)
+Features of Wanderlust
 
-Create, Read, Update, Delete (CRUD) Travel Listings
+User Authentication & Authorization
 
-Add/Delete Reviews for Listings
+Secure signup and login using Passport.js.
 
-Image Upload via Cloudinary
+Passwords are hashed before storage for security.
 
-Display Listings on Interactive Google Map
+Only logged-in users can create listings and reviews.
 
-Session Management with Express-session & Connect-mongo
+Only the owner of a listing/review can edit or delete it.
 
-Responsive UI design using Bootstrap
+Travel Listings (CRUD Operations)
 
-Error Handling with Custom Middleware
+Create, view, update, and delete travel/adventure listings.
+
+Each listing contains a title, description, location, country, price, and images.
+
+Review & Rating System
+
+Users can leave star ratings (1–5) and comments on listings.
+
+Reviews are displayed with reviewer details.
+
+Review deletion is allowed only by the author.
+
+Image Upload & Storage
+
+Images uploaded by users are stored securely using Cloudinary.
+
+Supports formats like JPG, PNG, and JPEG.
+
+Interactive Map Integration
+
+Each listing shows its location on a Google Map.
+
+Dynamic geocoding displays accurate marker placement.
+
+Responsive UI
+
+Designed with Bootstrap for responsiveness.
+
+Works smoothly across desktops, tablets, and mobile devices.
+
+Session Management
+
+User sessions handled using express-session.
+
+connect-mongo ensures sessions persist even after server restarts.
+
+Data Validation & Error Handling
+
+JOI schema validation ensures clean and secure data input.
+
+Custom error handling for 404, validation errors, and unauthorized access.
+
+Search & Explore
+
+Browse listings based on location and details.
+
+Can be extended with filters (price, country, rating).
+
+Security Enhancements
+
+Hashed passwords prevent misuse of sensitive data.
+
+Flash messages guide users with feedback on actions.
+
+Authorization middleware ensures role-based access.
+
+Flash Messaging System
+
+Provides instant success/error feedback to users after actions like login, logout, creating/deleting listings, etc.
+
+Middleware for Security & Access Control
+
+Custom middleware ensures only logged-in users can access protected routes.
+
+Ownership checks prevent unauthorized edits/deletions.
+
+Scalable Session Store
+
+Sessions stored in MongoDB using connect-mongo, ensuring scalability across deployments (not just in-memory).
+
+Templating with EJS + ejs-mate
+
+Dynamic rendering of pages with reusable layouts and partials.
+
+Cleaner code with template inheritance.
+
+Validation at Multiple Levels
+
+Server-side validation with JOI for listings & reviews.
+
+Prevents invalid data (e.g., empty title, rating > 5).
+
+Modular Project Structure
+
+MVC-like separation with routes, models, middleware, and utils.
+
+Improves maintainability and scalability.
+
+Error Handling System
+
+Custom ExpressError class for consistent error responses.
+
+Catch-all for unknown routes (404 handling).
+
+Environment Configuration
+
+Sensitive data (DB URL, Cloudinary keys, secret keys) stored in .env file.
+
+Keeps credentials safe and project deployment-ready.
+
+RESTful Routes
+
+Clean, REST-style URLs for listings, reviews, and user actions.
+
+Example:
+
+GET /listings → View all listings
+
+POST /listings → Create listing
+
+DELETE /listings/:id → Delete listing
+
+Deployment Readiness
+
+Configured with production and development environments.
+
+Uses environment variables to switch DB/keys easily.
+
 
 🛠️ Tech Stack
 Technology	Purpose

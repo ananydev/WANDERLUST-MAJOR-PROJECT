@@ -1,7 +1,7 @@
 https://apna-college-delta-project-xiqv.onrender.com/listings     - DEPLOYMENT LINK
 
 
-🌍 Wanderlust – Adventure & Stay Discovery Platform
+🌍# Wanderlust – Adventure & Stay Discovery Platform
 🚀 Project Overview
 
 Wanderlust is a full-stack web application designed for users to explore, list, and review travel destinations and stays. The platform allows users to browse listings, create their own travel spots, leave reviews, and view locations on an interactive map. The project demonstrates core full-stack development concepts such as authentication, CRUD operations, session management, and cloud storage integration.

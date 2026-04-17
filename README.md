@@ -230,6 +230,9 @@ ATLASDB_URL=your_mongodb_url
 SECRET=your_session_secret
 4️⃣ Run Application
 nodemon app.js
+
+
+
 ### ✅ Expected Outcome
 
 - Fully functional **full-stack web application**
@@ -240,13 +243,17 @@ nodemon app.js
 - 🗺️ **Google Maps integration** for location visualization
 - 💾 **Persistent user sessions**
 - ⚠️ Clean and structured **error handling**
+
+
 🚀 Future Enhancements
 🔍 Advanced search filters (price, rating, location)
 🏨 Booking system (check-in/check-out)
 👤 Role-based access (Admin/User)
 🤖 Recommendation system (ML integration)
 ⚛️ Convert frontend to React (SPA)
-☁️ Deploy on AWS / Render / Vercel
+
+
+
 📜 License
 
 This project is licensed under the MIT License.

@@ -207,7 +207,6 @@ Saved in MongoDB
 ↓  
 Redirect to listings page  
 
----
 
 ### 🎤 Interview Summary
 

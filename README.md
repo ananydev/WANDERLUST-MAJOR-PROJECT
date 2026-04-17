@@ -217,20 +217,15 @@ wanderlust/
 ---
 
 ⚡ Installation & Setup
-1️⃣ Clone Repository
+---
+
+## ⚡ Installation & Setup  
+
+### 1️⃣ Clone Repository  
+
+```bash
 git clone https://github.com/your-username/wanderlust.git
 cd wanderlust
-2️⃣ Install Dependencies
-npm install
-3️⃣ Setup Environment Variables (.env)
-CLOUD_NAME=your_cloud_name
-CLOUD_API_KEY=your_api_key
-CLOUD_API_SECRET=your_api_secret
-ATLASDB_URL=your_mongodb_url
-SECRET=your_session_secret
-4️⃣ Run Application
-nodemon app.js
-
 
 
 ### ✅ Expected Outcome

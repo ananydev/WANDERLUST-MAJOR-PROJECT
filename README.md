@@ -230,10 +230,10 @@ ATLASDB_URL=your_mongodb_url
 SECRET=your_session_secret
 4️⃣ Run Application
 nodemon app.js
-## ✅ Expected Outcome
+### ✅ Expected Outcome
 
-- 🚀 Fully functional **full-stack web application**
-- 🔐 Secure **login & signup authentication system**
+- Fully functional **full-stack web application**
+- Secure **login & signup authentication system**
 - 📝 Complete **CRUD operations** for listing management
 - ⭐ Integrated **review & rating system**
 - 🖼️ **Image uploads** using Cloudinary

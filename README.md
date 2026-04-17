@@ -195,27 +195,6 @@ Wanderlust addresses this by providing:
 
 ---
 
-## 📂 Project Structure  
-
-```bash
-wanderlust/
-│
-├── models/          # Mongoose schemas (User, Listing, Review)
-├── routes/          # Express routes
-├── controllers/     # Business logic
-├── views/           # EJS templates
-├── public/          # Static files (CSS, JS)
-├── utils/           # Helper functions (Error, Async wrapper)
-├── middleware.js    # Auth & validation middleware
-├── schema.js        # Joi validation schemas
-├── cloudConfig.js   # Cloudinary setup
-├── app.js           # Main server file
-├── .env             # Environment variables
-├── package.json     # Dependencies
-└── README.md        # Documentation
-
----
-
 ⚡ Installation & Setup
 ---
 
@@ -252,3 +231,27 @@ cd wanderlust
 📜 License
 
 This project is licensed under the MIT License.
+
+---
+
+## 📂 Project Structure  
+
+```bash
+wanderlust/
+│
+├── models/          # Mongoose schemas (User, Listing, Review)
+├── routes/          # Express routes
+├── controllers/     # Business logic
+├── views/           # EJS templates
+├── public/          # Static files (CSS, JS)
+├── utils/           # Helper functions (Error, Async wrapper)
+├── middleware.js    # Auth & validation middleware
+├── schema.js        # Joi validation schemas
+├── cloudConfig.js   # Cloudinary setup
+├── app.js           # Main server file
+├── .env             # Environment variables
+├── package.json     # Dependencies
+└── README.md        # Documentation
+
+---
+

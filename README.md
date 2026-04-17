@@ -185,23 +185,33 @@ Wanderlust addresses this by providing:
 ---
 
 
-User clicks "New Listing"
-        ↓
-GET /listings/new
-        ↓
-Render form
-        ↓
-User submits form
-        ↓
-POST /listings
-        ↓
-Middleware (auth + upload + validation)
-        ↓
-Controller creates listing
-        ↓
-Saved in MongoDB
-        ↓
-Redirect to listings page
+## 🚀 Combined Flow: New + Create Listing
+
+### 🔁 Step-by-Step Flow
+
+User clicks "New Listing"  
+↓  
+GET /listings/new  
+↓  
+Render form  
+↓  
+User submits form  
+↓  
+POST /listings  
+↓  
+Middleware (auth + upload + validation)  
+↓  
+Controller creates listing  
+↓  
+Saved in MongoDB  
+↓  
+Redirect to listings page  
+
+---
+
+### 🎤 Interview Summary
+
+“The new route renders the listing creation form using a GET request, while the create route handles form submission using a POST request. The request passes through authentication, file upload, and validation middleware, after which the controller saves the listing in MongoDB with the logged-in user as owner and redirects to the listings page.”
 
 ---
 

@@ -213,3 +213,39 @@ wanderlust/
 ├── .env             # Environment variables
 ├── package.json     # Dependencies
 └── README.md        # Documentation
+
+---
+
+⚡ Installation & Setup
+1️⃣ Clone Repository
+git clone https://github.com/your-username/wanderlust.git
+cd wanderlust
+2️⃣ Install Dependencies
+npm install
+3️⃣ Setup Environment Variables (.env)
+CLOUD_NAME=your_cloud_name
+CLOUD_API_KEY=your_api_key
+CLOUD_API_SECRET=your_api_secret
+ATLASDB_URL=your_mongodb_url
+SECRET=your_session_secret
+4️⃣ Run Application
+nodemon app.js
+✅ Expected Outcome
+Fully functional full-stack web app
+Secure login/signup system
+CRUD-based listing management
+Review & rating system
+Image uploads via Cloudinary
+Map integration with Google Maps
+Persistent sessions
+Clean error handling
+🚀 Future Enhancements
+🔍 Advanced search filters (price, rating, location)
+🏨 Booking system (check-in/check-out)
+👤 Role-based access (Admin/User)
+🤖 Recommendation system (ML integration)
+⚛️ Convert frontend to React (SPA)
+☁️ Deploy on AWS / Render / Vercel
+📜 License
+
+This project is licensed under the MIT License.

@@ -1,63 +1,58 @@
 🚀 Wanderlust – Adventure & Stay Discovery Platform
-
-📄 (Based on your content — refined & structured)
-
 🌍 Project Overview
 
-Wanderlust is a full-stack web application that allows users to explore, create, and review travel listings.
-It is designed to simulate a real-world accommodation platform (similar to Airbnb) while focusing on core backend engineering concepts such as authentication, authorization, database relationships, and cloud integration.
+Wanderlust is a full-stack web application that enables users to explore, create, and review travel listings.
 
-The platform enables users to:
+It simulates a real-world accommodation platform (similar to Airbnb) while focusing on core backend engineering concepts such as:
 
-Discover travel destinations
-Create and manage listings
-Upload images securely
-Leave reviews and ratings
-View locations on an interactive map
+Authentication & Authorization
+Database Relationships
+Cloud Integration
+Scalable Architecture
 ✨ Key Features
 🔐 Authentication & Authorization
 Secure signup/login using Passport.js
-Password hashing using bcrypt (via passport-local-mongoose)
+Password hashing via bcrypt (passport-local-mongoose)
 Protected routes using middleware
 Owner-based authorization:
-Only creators can edit/delete listings & reviews
+Only listing creators can edit/delete listings
+Only review authors can delete reviews
 🏡 Listing Management (CRUD)
 Create, Read, Update, Delete listings
 Each listing includes:
 Title, Description, Price
-Location, Country
+Location & Country
 Image (Cloudinary)
 RESTful routing implemented
 ⭐ Review & Rating System
-Users can:
 Add ratings (1–5 stars)
 Write comments
 Reviews linked to:
 Listing
 User (author)
-Only review author can delete
+Only review author can delete reviews
 🖼️ Image Upload (Cloud Integration)
 Integrated with Cloudinary
-Stores images securely in the cloud
+Secure image storage
 Supports:
 JPG, PNG, JPEG
 🗺️ Interactive Map
 Integrated Google Maps API
-Geocoding converts location → coordinates
-Dynamic marker placement on map
+Geocoding: location → coordinates
+Dynamic marker placement
 📱 Responsive UI
 Built using Bootstrap
-Fully responsive:
+Fully responsive across:
 Desktop
 Tablet
 Mobile
 ⚙️ Session Management
 express-session for session handling
-connect-mongo for persistent session storage
-User stays logged in even after server restart
+connect-mongo for persistent sessions
+Users remain logged in after server restart
 ✅ Validation & Error Handling
-Joi for server-side validation
-Prevents invalid data input
+Server-side validation using Joi
+Prevents invalid inputs
 Custom error handling:
 404 errors
 Validation errors
@@ -66,12 +61,12 @@ Unauthorized access
 Hashed passwords
 Protected routes
 Authorization middleware
-Environment variables for secrets
+Environment variables for sensitive data
 💬 Flash Messaging
-Real-time feedback:
-Login success
+Real-time feedback for:
+Login success/failure
 Errors
-CRUD actions
+CRUD operations
 🧱 Scalable Architecture
 MVC-like structure:
 Models
@@ -94,21 +89,21 @@ Bootstrap	UI & responsiveness
 Google Maps API	Map integration
 🎯 Problem Statement
 
-Many travelers struggle to find a platform where they can both discover and share travel experiences with reliable reviews and location visualization.
+Many travelers lack a platform where they can both discover destinations and share experiences with reliable reviews and map-based visualization.
 
-Wanderlust addresses this by providing a user-driven platform that enables:
+Wanderlust solves this by providing:
 
-Listing creation
-Community reviews
-Secure access
+User-generated listings
+Community-driven reviews
+Secure authentication
 Map-based exploration
 🎯 Objectives
 Build a full-stack web application
 Implement secure authentication & authorization
 Design scalable database schema
-Enable image uploads using cloud services
-Integrate map-based location visualization
-Ensure data validation and error handling
+Enable cloud-based image uploads
+Integrate map-based visualization
+Ensure validation & error handling
 📂 Project Structure
 wanderlust/
 │
@@ -117,7 +112,7 @@ wanderlust/
 ├── controllers/     # Business logic
 ├── views/           # EJS templates
 ├── public/          # Static files (CSS, JS)
-├── utils/           # Helper functions (Error, Async wrapper)
+├── utils/           # Helper functions
 ├── middleware.js    # Auth & validation middleware
 ├── schema.js        # Joi validation schemas
 ├── cloudConfig.js   # Cloudinary setup
@@ -141,11 +136,11 @@ SECRET=your_session_secret
 nodemon app.js
 ✅ Expected Outcome
 Fully functional full-stack web app
-Secure login/signup system
+Secure authentication system
 CRUD-based listing management
 Review & rating system
 Image uploads via Cloudinary
-Map integration with Google Maps
+Google Maps integration
 Persistent sessions
 Clean error handling
 🚀 Future Enhancements
@@ -154,7 +149,7 @@ Booking system (check-in/check-out)
 Role-based access (Admin/User)
 Recommendation system (ML integration)
 Convert frontend to React (SPA)
-Deploy on AWS / Render / Vercel
+Deployment (AWS / Render / Vercel)
 📜 License
 
 This project is licensed under the MIT License.

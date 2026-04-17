@@ -230,15 +230,16 @@ ATLASDB_URL=your_mongodb_url
 SECRET=your_session_secret
 4️⃣ Run Application
 nodemon app.js
-✅ Expected Outcome
-Fully functional full-stack web app
-Secure login/signup system
-CRUD-based listing management
-Review & rating system
-Image uploads via Cloudinary
-Map integration with Google Maps
-Persistent sessions
-Clean error handling
+## ✅ Expected Outcome
+
+- 🚀 Fully functional **full-stack web application**
+- 🔐 Secure **login & signup authentication system**
+- 📝 Complete **CRUD operations** for listing management
+- ⭐ Integrated **review & rating system**
+- 🖼️ **Image uploads** using Cloudinary
+- 🗺️ **Google Maps integration** for location visualization
+- 💾 **Persistent user sessions**
+- ⚠️ Clean and structured **error handling**
 🚀 Future Enhancements
 🔍 Advanced search filters (price, rating, location)
 🏨 Booking system (check-in/check-out)

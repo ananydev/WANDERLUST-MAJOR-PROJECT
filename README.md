@@ -184,6 +184,28 @@ Wanderlust addresses this by providing:
 
 ---
 
+
+User clicks "New Listing"
+        ↓
+GET /listings/new
+        ↓
+Render form
+        ↓
+User submits form
+        ↓
+POST /listings
+        ↓
+Middleware (auth + upload + validation)
+        ↓
+Controller creates listing
+        ↓
+Saved in MongoDB
+        ↓
+Redirect to listings page
+
+---
+
+
 ## 🎯 Objectives  
 
 - Build a full-stack web application  

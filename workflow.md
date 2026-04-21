@@ -101,7 +101,6 @@ Redirect to /listings
 
 # 🚀 Working of "Create New Listing" (Easy + Structured)
 
----
 
 ## 🔁 Step-by-Step Workflow
 

@@ -216,7 +216,7 @@ Redirect to listings page
 
 
 
-## 🚀 Combined Flow: Create + Show Listing
+## 🚀 Combined Flow: Create + Show Review
 
 ### 🔁 Step-by-Step Flow
 User fills form

@@ -255,7 +255,7 @@ Loop through reviews
         ↓
 Display on UI
 
-IMPORTANT CONCEPTS USED
+## IMPORTANT CONCEPTS USED
 ✅ 1. Reference Relationship
 Listing stores review IDs
 Reviews stored in a separate collection
@@ -266,7 +266,7 @@ Authentication → isLoggedIn
 Validation → Joi
 ✅ 4. MVC Architecture
 Route → Controller → Model → View
-🎤 INTERVIEW ANSWER (PERFECT)
+## 🎤 INTERVIEW ANSWER (PERFECT)
 
 When a user submits a review form, the data is sent to a POST route where it is first validated using Joi and checked for authentication. In the controller, a new review document is created, linked to the current user, and its ObjectId is stored in the listing’s reviews array. Both the review and listing are then saved.
 

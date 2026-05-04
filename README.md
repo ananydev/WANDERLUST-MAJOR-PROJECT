@@ -24,6 +24,161 @@ The platform enables users to:
 ## HLD
 <img width="1077" height="1028" alt="image" src="https://github.com/user-attachments/assets/dd044aa8-2ffd-4a1e-ae92-58065b8e5f4a" />
 
+
+
+🚀 Wanderlust – High Level Design (HLD)
+🏗️ Architecture Overview
+
+This project follows a 3-tier architecture:
+
+Client (Browser / EJS UI)
+        ↓ HTTP Requests (GET/POST/PUT/DELETE)
+Backend (Node.js + Express)
+        ↓
+Database (MongoDB Atlas)
+        ↓
+External Services (Cloudinary, Google Maps)
+🧩 1. Client Layer (Frontend)
+
+The client layer is responsible for rendering UI and collecting user input.
+
+🔹 Technologies Used
+EJS Templates → Dynamic HTML rendering
+Bootstrap → Responsive UI
+Client-side JS → Form validation
+🔹 Components
+Views → listings, users, reviews
+Layouts → boilerplate, navbar, footer
+UI Elements → cards, forms, responsive design
+🔹 Responsibilities
+Display listings, reviews, images
+Handle form submissions (create/edit)
+Show flash messages
+⚙️ 2. Backend Layer (Node.js + Express)
+
+This layer handles all business logic and request processing.
+
+🔹 Routing Layer
+
+Defines API endpoints:
+
+GET    /listings
+POST   /listings
+PUT    /listings/:id
+DELETE /listings/:id
+POST   /reviews
+POST   /signup
+POST   /login
+GET    /logout
+
+👉 Uses method-override to support PUT & DELETE
+
+🔹 Controllers
+
+Handle business logic:
+
+listings.js → CRUD operations for listings
+reviews.js → review management
+users.js → authentication
+🔹 Middleware
+
+Used for request preprocessing:
+
+isLoggedIn → authentication check
+isOwner → authorization
+validateListing → Joi validation
+validateReview → Joi validation
+🔹 Authentication & Sessions
+Passport.js (Local Strategy) → login/signup
+passport-local-mongoose → password hashing
+express-session → session management
+connect-mongo → session storage in MongoDB
+connect-flash → success/error messages
+🔹 File Upload System
+multer → handles file upload
+Cloudinary → stores images in cloud
+multer-storage-cloudinary → connects both
+
+👉 Only image URL is stored in DB, not actual file
+
+🗄️ 3. Data Layer (MongoDB Atlas)
+
+Data is stored using Mongoose ODM with 3 main collections.
+
+🔹 Users
+_id, username, email, password(hash + salt)
+🔹 Listings
+_id, title, description, price, location
+image { url, filename }
+owner → ObjectId (User)
+reviews → [ObjectId]
+🔹 Reviews
+_id, rating, comment, createdAt
+author → ObjectId (User)
+🔹 Relationships
+User (1) ────> (Many) Listings
+User (1) ────> (Many) Reviews
+Listing (1) ────> (Many) Reviews
+🔁 4. Request Flow (Example: Create Listing)
+User submits form
+        ↓
+POST /listings
+        ↓
+Middleware (auth + multer + Joi validation)
+        ↓
+Controller (createListing)
+        ↓
+Mongoose saves data
+        ↓
+MongoDB stores listing
+        ↓
+Redirect response
+        ↓
+Frontend renders updated page
+🔐 5. Authentication Flow
+User logs in
+        ↓
+Passport verifies credentials
+        ↓
+Session created (stored in MongoDB)
+        ↓
+Session ID sent as cookie
+        ↓
+Subsequent requests include cookie
+        ↓
+User remains logged in
+🌐 6. External Services
+Cloudinary → Image storage & CDN
+Google Maps API → Location display
+⚙️ 7. Key Features
+
+✔ MVC Architecture
+✔ Session-based authentication
+✔ RESTful API design
+✔ File upload with cloud storage
+✔ Server-side validation (Joi)
+✔ Centralized error handling
+✔ Flash messaging
+✔ Map integration
+
+🧠 8. Folder Structure
+project/
+ ├── routes/        → API routes
+ ├── controllers/   → Business logic
+ ├── models/        → Database schemas
+ ├── middleware/    → Auth & validation
+ ├── views/         → EJS templates
+ ├── public/        → Static assets
+ ├── utils/         → Helper functions
+ └── app.js         → Entry point
+🚀 9. Scalability Considerations
+Sessions stored in MongoDB (persistent & scalable)
+Cloudinary for image CDN
+Can be extended with:
+Load balancing
+Redis caching
+Microservices
+
 ---
 
 

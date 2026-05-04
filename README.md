@@ -292,29 +292,6 @@ To display reviews, the listing is fetched using Mongoose and populate is used t
 
 ---
 
-## 📂 Project Structure  
-
-```bash
-wanderlust/
-│
-├── models/          # Mongoose schemas (User, Listing, Review)
-├── routes/          # Express routes
-├── controllers/     # Business logic
-├── views/           # EJS templates
-├── public/          # Static files (CSS, JS)
-├── utils/           # Helper functions (Error, Async wrapper)
-├── middleware.js    # Auth & validation middleware
-├── schema.js        # Joi validation schemas
-├── cloudConfig.js   # Cloudinary setup
-├── app.js           # Main server file
-├── .env             # Environment variables
-├── package.json     # Dependencies
-└── README.md        # Documentation
-
----
-
-
-
 ## ⚡ Installation & Setup  
 
 ### 1️⃣ Clone Repository  
@@ -345,8 +322,31 @@ cd wanderlust
 
 
 
-##HLD
-<img width="1077" height="1028" alt="image" src="https://github.com/user-attachments/assets/7c6d6c53-8ba0-4c4d-933d-343bc7eb8a3b" />
+
+## 📂 Project Structure  
+
+```bash
+wanderlust/
+│
+├── models/          # Mongoose schemas (User, Listing, Review)
+├── routes/          # Express routes
+├── controllers/     # Business logic
+├── views/           # EJS templates
+├── public/          # Static files (CSS, JS)
+├── utils/           # Helper functions (Error, Async wrapper)
+├── middleware.js    # Auth & validation middleware
+├── schema.js        # Joi validation schemas
+├── cloudConfig.js   # Cloudinary setup
+├── app.js           # Main server file
+├── .env             # Environment variables
+├── package.json     # Dependencies
+└── README.md        # Documentation
+
+---
+
+
+
+
 
 
 

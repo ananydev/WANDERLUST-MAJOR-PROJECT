@@ -341,6 +341,11 @@ cd wanderlust
 
 
 
+##HLD
+<img width="1077" height="1028" alt="image" src="https://github.com/user-attachments/assets/7c6d6c53-8ba0-4c4d-933d-343bc7eb8a3b" />
+
+
+
 📜 License
 
 This project is licensed under the MIT License.

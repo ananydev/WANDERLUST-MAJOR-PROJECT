@@ -292,7 +292,7 @@ To display reviews, the listing is fetched using Mongoose and populate is used t
 
 ---
 
-## ⚡ Installation & Setup  
+##Installation & Setup  
 
 ### 1️⃣ Clone Repository  
 

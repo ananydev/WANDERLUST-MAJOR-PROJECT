@@ -21,7 +21,10 @@ The platform enables users to:
 ---
 
 
+## HLD
 <img width="1077" height="1028" alt="image" src="https://github.com/user-attachments/assets/dd044aa8-2ffd-4a1e-ae92-58065b8e5f4a" />
+
+---
 
 
 ## ✨ Key Features  
@@ -292,16 +295,16 @@ To display reviews, the listing is fetched using Mongoose and populate is used t
 
 ---
 
-##Installation & Setup  
+## Installation & Setup  
 
 ### 1️⃣ Clone Repository  
 
-```bash
+bash
 git clone https://github.com/your-username/wanderlust.git
 cd wanderlust
 
 
-### ✅ Expected Outcome
+## Expected Outcome
 
 - Fully functional **full-stack web application**
 - Secure **login & signup authentication system**
@@ -313,7 +316,7 @@ cd wanderlust
 - ⚠️ Clean and structured **error handling**
 
 
-🚀 Future Enhancements
+## 🚀 Future Enhancements
 🔍 Advanced search filters (price, rating, location)
 🏨 Booking system (check-in/check-out)
 👤 Role-based access (Admin/User)

@@ -20,6 +20,10 @@ The platform enables users to:
 
 ---
 
+
+<img width="1077" height="1028" alt="image" src="https://github.com/user-attachments/assets/dd044aa8-2ffd-4a1e-ae92-58065b8e5f4a" />
+
+
 ## ✨ Key Features  
 
 ### 🔐 Authentication & Authorization  

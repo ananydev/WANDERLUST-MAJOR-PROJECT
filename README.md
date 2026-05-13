@@ -31,13 +31,17 @@ The platform enables users to:
 
 This project follows a 3-tier architecture:
 
+```text
 Client (Browser / EJS UI)
-        ↓ HTTP Requests (GET/POST/PUT/DELETE)
+        ↓
+HTTP Requests (GET/POST/PUT/DELETE)
+        ↓
 Backend (Node.js + Express)
         ↓
 Database (MongoDB Atlas)
         ↓
 External Services (Cloudinary, Google Maps)
+```
 
 ## 🧩 1. Client Layer (Frontend)
 

@@ -269,7 +269,9 @@ project/
 - Redis caching  
 - Microservices architecture  
 - JWT-based authentication  
-- Docker deployment  
+- Docker deployment
+
+---
 
 ## ✨ Key Features  
 

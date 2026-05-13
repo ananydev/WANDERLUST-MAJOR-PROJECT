@@ -26,9 +26,9 @@ The platform enables users to:
 
 
 
-# 🚀 Wanderlust – High Level Design (HLD)
+## 🚀 Wanderlust – High Level Design (HLD)
 
-# 🏗️ Architecture Overview
+## 🏗️ Architecture Overview
 
 This project follows a 3-tier architecture:
 
@@ -40,16 +40,16 @@ Database (MongoDB Atlas)
         ↓
 External Services (Cloudinary, Google Maps)
 
-# -🧩 1. Client Layer (Frontend)
+## -🧩 1. Client Layer (Frontend)
 
 The client layer is responsible for rendering UI and collecting user input.
 
-- Technologies Used
+- Technologies Used :
 EJS Templates → Dynamic HTML rendering
 Bootstrap → Responsive UI
 Client-side JS → Form validation
 
-- Components
+### - Components
 Views → listings, users, reviews
 Layouts → boilerplate, navbar, footer
 UI Elements → cards, forms, responsive design

@@ -26,39 +26,44 @@ The platform enables users to:
 
 
 
-🚀 Wanderlust – High Level Design (HLD)
-🏗️ Architecture Overview
+# 🚀 Wanderlust – High Level Design (HLD)
+
+# 🏗️ Architecture Overview
 
 This project follows a 3-tier architecture:
 
-Client (Browser / EJS UI)
+- Client (Browser / EJS UI)
         ↓ HTTP Requests (GET/POST/PUT/DELETE)
 Backend (Node.js + Express)
         ↓
 Database (MongoDB Atlas)
         ↓
 External Services (Cloudinary, Google Maps)
-🧩 1. Client Layer (Frontend)
+
+# -🧩 1. Client Layer (Frontend)
 
 The client layer is responsible for rendering UI and collecting user input.
 
-🔹 Technologies Used
+- Technologies Used
 EJS Templates → Dynamic HTML rendering
 Bootstrap → Responsive UI
 Client-side JS → Form validation
-🔹 Components
+
+- Components
 Views → listings, users, reviews
 Layouts → boilerplate, navbar, footer
 UI Elements → cards, forms, responsive design
-🔹 Responsibilities
+
+- Responsibilities
 Display listings, reviews, images
 Handle form submissions (create/edit)
 Show flash messages
-⚙️ 2. Backend Layer (Node.js + Express)
+
+# -⚙️ 2. Backend Layer (Node.js + Express)
 
 This layer handles all business logic and request processing.
 
-🔹 Routing Layer
+- Routing Layer
 
 Defines API endpoints:
 
@@ -73,22 +78,21 @@ GET    /logout
 
 👉 Uses method-override to support PUT & DELETE
 
-🔹 Controllers
+- Controllers
 
 Handle business logic:
-
 listings.js → CRUD operations for listings
 reviews.js → review management
 users.js → authentication
-🔹 Middleware
 
+- Middleware
 Used for request preprocessing:
-
 isLoggedIn → authentication check
 isOwner → authorization
 validateListing → Joi validation
 validateReview → Joi validation
-🔹 Authentication & Sessions
+
+- Authentication & Sessions
 Passport.js (Local Strategy) → login/signup
 passport-local-mongoose → password hashing
 express-session → session management

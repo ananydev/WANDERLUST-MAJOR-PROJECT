@@ -31,7 +31,7 @@ The platform enables users to:
 
 This project follows a 3-tier architecture:
 
-- Client (Browser / EJS UI)
+Client (Browser / EJS UI)
         ↓ HTTP Requests (GET/POST/PUT/DELETE)
 Backend (Node.js + Express)
         ↓

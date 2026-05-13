@@ -428,11 +428,7 @@ Authentication → isLoggedIn
 Validation → Joi
 ✅ 4. MVC Architecture
 Route → Controller → Model → View
-## 🎤 INTERVIEW ANSWER (PERFECT)
 
-When a user submits a review form, the data is sent to a POST route where it is first validated using Joi and checked for authentication. In the controller, a new review document is created, linked to the current user, and its ObjectId is stored in the listing’s reviews array. Both the review and listing are then saved.
-
-To display reviews, the listing is fetched using Mongoose and populate is used to retrieve full review and author details. These are then passed to the frontend and rendered using EJS by looping through the reviews.
 
 ---
 
@@ -458,6 +454,8 @@ bash
 git clone https://github.com/your-username/wanderlust.git
 cd wanderlust
 
+---
+
 
 ## Expected Outcome
 
@@ -470,6 +468,9 @@ cd wanderlust
 - 💾 **Persistent user sessions**
 - ⚠️ Clean and structured **error handling**
 
+---
+
+
 
 ## 🚀 Future Enhancements
 🔍 Advanced search filters (price, rating, location)
@@ -477,6 +478,8 @@ cd wanderlust
 👤 Role-based access (Admin/User)
 🤖 Recommendation system (ML integration)
 ⚛️ Convert frontend to React (SPA)
+
+---
 
 
 

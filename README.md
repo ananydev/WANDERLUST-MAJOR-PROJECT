@@ -43,95 +43,151 @@ Database (MongoDB Atlas)
 External Services (Cloudinary, Google Maps)
 ```
 
-## 🧩 1. Client Layer (Frontend)
+# 🧩 1. Client Layer (Frontend)
 
-The client layer is responsible for rendering UI and collecting user input.
+The client layer is responsible for rendering the UI and collecting user input.
 
-- Technologies Used :
-EJS Templates → Dynamic HTML rendering
-Bootstrap → Responsive UI
-Client-side JS → Form validation
+## 🛠️ Technologies Used
 
-### - Components
-Views → listings, users, reviews
-Layouts → boilerplate, navbar, footer
-UI Elements → cards, forms, responsive design
+- **EJS Templates** → Dynamic HTML rendering  
+- **Bootstrap** → Responsive UI  
+- **Client-side JavaScript** → Form validation  
 
-- Responsibilities
-Display listings, reviews, images
-Handle form submissions (create/edit)
-Show flash messages
+## 📦 Components
 
-# -⚙️ 2. Backend Layer (Node.js + Express)
+- **Views** → listings, users, reviews  
+- **Layouts** → boilerplate, navbar, footer  
+- **UI Elements** → cards, forms, responsive design  
+
+## 🎯 Responsibilities
+
+- Display listings, reviews, and images  
+- Handle form submissions (Create/Edit)  
+- Show flash messages  
+
+---
+
+# ⚙️ 2. Backend Layer (Node.js + Express)
 
 This layer handles all business logic and request processing.
 
-- Routing Layer
+## 🌐 Routing Layer
 
-Defines API endpoints:
+Defines RESTful API endpoints:
 
-GET    /listings
-POST   /listings
-PUT    /listings/:id
-DELETE /listings/:id
-POST   /reviews
-POST   /signup
-POST   /login
-GET    /logout
+```text
+GET     /listings
+POST    /listings
+PUT     /listings/:id
+DELETE  /listings/:id
 
-👉 Uses method-override to support PUT & DELETE
+POST    /reviews
 
-- Controllers
+POST    /signup
+POST    /login
+GET     /logout
+```
+
+👉 Uses **method-override** to support `PUT` & `DELETE` requests.
+
+---
+
+## 🧠 Controllers
 
 Handle business logic:
-listings.js → CRUD operations for listings
-reviews.js → review management
-users.js → authentication
 
-- Middleware
+- **listings.js** → CRUD operations for listings  
+- **reviews.js** → Review management  
+- **users.js** → Authentication handling  
+
+---
+
+## 🛡️ Middleware
+
 Used for request preprocessing:
-isLoggedIn → authentication check
-isOwner → authorization
-validateListing → Joi validation
-validateReview → Joi validation
 
-- Authentication & Sessions
-Passport.js (Local Strategy) → login/signup
-passport-local-mongoose → password hashing
-express-session → session management
-connect-mongo → session storage in MongoDB
-connect-flash → success/error messages
-🔹 File Upload System
-multer → handles file upload
-Cloudinary → stores images in cloud
-multer-storage-cloudinary → connects both
+- **isLoggedIn** → Authentication check  
+- **isOwner** → Authorization check  
+- **validateListing** → Joi validation  
+- **validateReview** → Joi validation  
 
-👉 Only image URL is stored in DB, not actual file
+---
 
-🗄️ 3. Data Layer (MongoDB Atlas)
+## 🔐 Authentication & Sessions
 
-Data is stored using Mongoose ODM with 3 main collections.
+- **Passport.js (Local Strategy)** → Login & Signup authentication  
+- **passport-local-mongoose** → Password hashing  
+- **express-session** → Session management  
+- **connect-mongo** → Session storage in MongoDB  
+- **connect-flash** → Success/Error flash messages  
 
-🔹 Users
-_id, username, email, password(hash + salt)
-🔹 Listings
+### 🔑 Security Features
+
+- Password hashing using **bcrypt (passport-local-mongoose)**  
+- Protected routes using middleware  
+
+### 👤 Owner-based Authorization
+
+- Only creators can edit/delete listings & reviews  
+
+---
+
+## 📤 File Upload System
+
+- **multer** → Handles file uploads  
+- **Cloudinary** → Stores images in the cloud  
+- **multer-storage-cloudinary** → Connects Multer with Cloudinary  
+
+👉 Only the **image URL** is stored in the database, not the actual file.
+
+---
+
+# 🗄️ 3. Data Layer (MongoDB Atlas)
+
+Data is stored using **Mongoose ODM** with 3 main collections.
+
+## 👤 Users Collection
+
+```text
+_id, username, email, password (hash + salt)
+```
+
+## 🏡 Listings Collection
+
+```text
 _id, title, description, price, location
 image { url, filename }
 owner → ObjectId (User)
 reviews → [ObjectId]
-🔹 Reviews
+```
+
+## ⭐ Reviews Collection
+
+```text
 _id, rating, comment, createdAt
 author → ObjectId (User)
-🔹 Relationships
+```
+
+---
+
+## 🔗 Relationships
+
+```text
 User (1) ────> (Many) Listings
 User (1) ────> (Many) Reviews
 Listing (1) ────> (Many) Reviews
-🔁 4. Request Flow (Example: Create Listing)
+```
+
+---
+
+# 🔁 4. Request Flow (Example: Create Listing)
+
+```text
 User submits form
         ↓
 POST /listings
         ↓
-Middleware (auth + multer + Joi validation)
+Middleware (Auth + Multer + Joi Validation)
         ↓
 Controller (createListing)
         ↓
@@ -142,7 +198,13 @@ MongoDB stores listing
 Redirect response
         ↓
 Frontend renders updated page
-🔐 5. Authentication Flow
+```
+
+---
+
+# 🔐 5. Authentication Flow
+
+```text
 User logs in
         ↓
 Passport verifies credentials
@@ -154,40 +216,60 @@ Session ID sent as cookie
 Subsequent requests include cookie
         ↓
 User remains logged in
-🌐 6. External Services
-Cloudinary → Image storage & CDN
-Google Maps API → Location display
-⚙️ 7. Key Features
+```
 
-✔ MVC Architecture
-✔ Session-based authentication
-✔ RESTful API design
-✔ File upload with cloud storage
-✔ Server-side validation (Joi)
-✔ Centralized error handling
-✔ Flash messaging
-✔ Map integration
+---
 
-🧠 8. Folder Structure
+# 🌐 6. External Services
+
+- **Cloudinary** → Image storage & CDN  
+- **Google Maps API** → Location display  
+
+---
+
+# ⚡ 7. Key Features
+
+✔ MVC Architecture  
+✔ Session-based authentication  
+✔ RESTful API design  
+✔ File upload with cloud storage  
+✔ Server-side validation using Joi  
+✔ Centralized error handling  
+✔ Flash messaging  
+✔ Google Maps integration  
+✔ Responsive UI using Bootstrap  
+
+---
+
+# 🧠 8. Folder Structure
+
+```text
 project/
  ├── routes/        → API routes
  ├── controllers/   → Business logic
  ├── models/        → Database schemas
- ├── middleware/    → Auth & validation
+ ├── middleware/    → Authentication & validation
  ├── views/         → EJS templates
  ├── public/        → Static assets
  ├── utils/         → Helper functions
  └── app.js         → Entry point
-🚀 9. Scalability Considerations
-Sessions stored in MongoDB (persistent & scalable)
-Cloudinary for image CDN
-Can be extended with:
-Load balancing
-Redis caching
-Microservices
+```
 
 ---
 
+# 🚀 9. Scalability Considerations
+
+- Sessions stored in MongoDB (**persistent & scalable**)  
+- Cloudinary used as an image CDN  
+- Modular MVC architecture for maintainability  
+
+## 🔮 Future Enhancements
+
+- Load balancing  
+- Redis caching  
+- Microservices architecture  
+- JWT-based authentication  
+- Docker deployment  
 
 ## ✨ Key Features  
 

@@ -26,7 +26,6 @@ The platform enables users to:
 
 
 
-## 🚀 Wanderlust – High Level Design (HLD)
 
 ## 🏗️ Architecture Overview
 
@@ -40,7 +39,7 @@ Database (MongoDB Atlas)
         ↓
 External Services (Cloudinary, Google Maps)
 
-## -🧩 1. Client Layer (Frontend)
+## 🧩 1. Client Layer (Frontend)
 
 The client layer is responsible for rendering UI and collecting user input.
 
